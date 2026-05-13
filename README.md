@@ -23,32 +23,12 @@ In your BrainFlow dashboard:
 
 ### 2. Connect to Claude Desktop
 
-Add this to your Claude Desktop config:
+In Claude Desktop, go to **Settings → MCP Servers → Add Custom Server**.
 
-```json
-{
-  "mcpServers": {
-    "brainflow": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://brain-flow.ai/mcp/sse",
-        "--header",
-        "x-api-key:bf_mcp_YOUR_KEY_HERE"
-      ]
-    }
-  }
-}
-```
+- **Name:** `BrainFlow`
+- **URL:** `https://brain-flow.ai/mcp/sse?api_key=bf_mcp_YOUR_KEY_HERE`
 
 Replace `YOUR_KEY_HERE` with your actual API key.
-
-**Clients without header support:** If your MCP client (e.g. Kimi, some VS Code extensions) does not support custom headers, append the key as a query parameter instead:
-
-```
-https://brain-flow.ai/mcp/sse?api_key=bf_mcp_YOUR_KEY_HERE
-```
 
 Restart Claude. Start asking questions.
 
