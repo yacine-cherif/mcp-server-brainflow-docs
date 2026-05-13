@@ -8,6 +8,8 @@
         "https://brain-flow.ai/mcp/sse",
         "--header",
         "x-api-key:bf_mcp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        // Tip: If your client does not support headers, use the URL:
+        // "https://brain-flow.ai/mcp/sse?api_key=bf_mcp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       ]
     }
   }

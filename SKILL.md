@@ -66,6 +66,12 @@ Add this to your Claude Desktop config file:
 
 Replace `YOUR_KEY_HERE` with your actual API key.
 
+**Clients without header support:** If your MCP client (e.g. Kimi, some VS Code extensions) does not support custom headers, append the key as a query parameter instead:
+
+```
+https://brain-flow.ai/mcp/sse?api_key=bf_mcp_YOUR_KEY_HERE
+```
+
 ### 4. Restart and query
 
 Restart Claude Desktop. Ask your first question:
@@ -97,6 +103,8 @@ Add to your VS Code `settings.json`:
   }
 }
 ```
+
+If your client does not support headers, use the query param URL: `https://brain-flow.ai/mcp/sse?api_key=bf_mcp_YOUR_KEY_HERE`
 
 ## Cursor
 
