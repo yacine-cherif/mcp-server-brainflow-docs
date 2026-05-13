@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "brainflow": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://brain-flow.ai/mcp/sse",
+        "--header",
+        "x-api-key:bf_mcp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      ]
+    }
+  }
+}
