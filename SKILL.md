@@ -32,7 +32,7 @@ This skill connects Claude Desktop, Cursor, GitHub Copilot, and other MCP-compat
 
 In your BrainFlow dashboard:
 
-1. Go to **Settings → API Keys**
+1. Go to **API Keys**
 2. Click **Generate key**
 3. Name it (e.g. "Claude Desktop")
 4. Copy the key — you will only see it once
