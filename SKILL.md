@@ -4,40 +4,38 @@ Query your team's shared email memory from any AI assistant.
 
 ## Overview
 
-This skill connects Claude, ChatGPT, Gemini, Cursor, GitHub Copilot, and other MCP-compatible assistants to your BrainFlow database. Ask questions about emails, deals, tasks, and team activity in plain English. The AI translates your question to SQL, queries your data, and returns sourced answers with links to original threads.
+This skill connects Claude, ChatGPT, Gemini, Cursor, and VS Code Copilot to your BrainFlow database. Ask questions about emails, deals, tasks, and team activity in plain English. The AI translates your question to SQL, queries your data, and returns sourced answers with links to original threads.
 
-## Why shared team memory matters
+## Features
 
-Every day, critical business knowledge lives in email threads — client commitments, pricing decisions, project timelines, and vendor negotiations. When that knowledge is trapped in individual inboxes, your team pays a hidden tax:
+- **Natural Language Queries** — Ask questions in plain English. The AI translates to SQL and returns sourced answers.
+- **Team Memory Search** — Query emails, tasks, deals, and decisions across your entire company workspace.
+- **Cross-Team Context** — Sales handoffs to ops, legal feedback to product, marketing summaries for leadership — all connected.
+- **Multi-Platform** — Works with Claude (Web + Desktop), ChatGPT, Gemini, Cursor, and VS Code Copilot.
+- **Company-Scoped Security** — Every query is automatically filtered to your company. No cross-tenant data leakage.
+- **Read-Only** — Only `SELECT` queries are permitted. No write, delete, or modify operations possible.
+- **Audit Trail** — Every API key usage is tracked with timestamps.
 
-- **New hires spend weeks catching up** on client history that already exists in someone else's inbox
-- **Deals stall when account managers are out** because no one knows what was promised last week
-- **Teams duplicate work** because marketing doesn't know sales already spoke to that prospect
-- **Leadership burns hours in status meetings** instead of reading the actual conversations
+## Prerequisites
 
-BrainFlow turns your team's email history into a shared memory that any AI assistant can query. Ask "What did we commit to Delta Corp?" and get the answer in seconds — sourced, with links to the original threads.
+- Active [BrainFlow](https://brain-flow.ai) account
+- BrainFlow API key (generated from your dashboard)
+- MCP-compatible AI assistant (Claude, ChatGPT, Gemini, Cursor, or VS Code)
 
-**The result:** less time searching, fewer dropped balls, and a team that operates with full context.
+## BrainFlow Pricing
 
-## What you can ask
+The MCP server is **included free** with every BrainFlow subscription. No separate MCP charge.
 
-### Cross-team handoffs
-- "What commitments did sales make to Delta Corp that operations should know about?"
-- "Has anyone from engineering spoken to Acme Corp about the API issues?"
-- "Which prospects did the BD team reach out to that we already have contracts with?"
+| Plan | Users | MCP Access | Rate Limits | Self-hosting |
+|------|-------|------------|-------------|--------------|
+| **Founder** | 1 | ✅ Full access | Standard | — |
+| **Startup** | Up to 10 | ✅ Full access | Higher | — |
+| **Corporate** | Up to 100 | ✅ Full access | Highest | ✅ Available |
 
-### Team activity & decisions
-- "Can you summarize the marketing team's exchanges over the last week?"
-- "What did the product team decide about the Q3 roadmap in their last sync?"
-- "Show me unresolved high-priority tasks across all teams."
+> **Founder plan** includes full MCP access. Perfect for solo founders who want AI-powered memory.
+> **Corporate plan** offers optional self-hosted deployment for strict compliance requirements.
 
-### Shared documents & contracts
-- "What did legal say about the Alpha contract terms?"
-- "Find all Q3 budget discussions across departments."
-
-### Company-wide insights
-- "Summarize all client feedback the support team collected this month."
-- "Which topics came up most in leadership emails this quarter?"
+[View full pricing →](https://brain-flow.ai/pricing)
 
 ## Setup
 
@@ -93,19 +91,8 @@ Settings → Apps → Advanced settings → Enable Developer Mode → Create app
 gemini mcp add brainflow https://brain-flow.ai/mcp/sse --header "x-api-key:bf_mcp_YOUR_KEY_HERE"
 ```
 
-Replace `YOUR_KEY_HERE` with your actual API key.
-
-### 4. Restart and query
-
-Restart your AI assistant. Ask your first question:
-
-> "What did marketing and sales agree on for the Q4 launch timeline?"
-
-Your assistant will query your BrainFlow memory and return a sourced answer.
-
-## GitHub Copilot (VS Code)
-
-Add to your VS Code `settings.json`:
+**VS Code**  
+Add to your `settings.json`:
 
 ```json
 {
@@ -127,36 +114,63 @@ Add to your VS Code `settings.json`:
 }
 ```
 
-## Cursor
-
+**Cursor**  
 1. Open Cursor Settings (Cmd/Ctrl + ,)
 2. Go to MCP
 3. Add the BrainFlow server config above
 4. Query in Composer while you code
 
+Replace `YOUR_KEY_HERE` with your actual API key.
+
+### 4. Restart and query
+
+Restart your AI assistant. Ask your first question:
+
+> "What did marketing and sales agree on for the Q4 launch timeline?"
+
+Your assistant will query your BrainFlow memory and return a sourced answer.
+
+---
+
+## What You Can Ask
+
+### Cross-team handoffs
+| Question | What you get |
+|----------|--------------|
+| "What commitments did sales make to Delta Corp that operations should know about?" | Sourced commitments with links to original threads |
+| "Has anyone from engineering spoken to Acme Corp about the API issues?" | Team member names, dates, and conversation summaries |
+| "Which prospects did BD reach out to that we already have contracts with?" | Overlap detection between prospects and existing clients |
+
+### Team activity & decisions
+| Question | What you get |
+|----------|--------------|
+| "Summarize the marketing team's exchanges over the last week." | Weekly summary with key topics and decisions |
+| "What did product decide about the Q3 roadmap in their last sync?" | Decision points and action items from product threads |
+| "Show me unresolved high-priority tasks across all teams." | Filtered task list with assignees and deadlines |
+
+### Documents & contracts
+| Question | What you get |
+|----------|--------------|
+| "What did legal say about the Alpha contract terms?" | Legal feedback summary with clause references |
+| "Find all Q3 budget discussions across departments." | Aggregated budget threads with dollar amounts |
+
+### Company-wide insights
+| Question | What you get |
+|----------|--------------|
+| "Summarize client feedback the support team collected this month." | Themed feedback summary with sentiment trends |
+| "Which topics came up most in leadership emails this quarter?" | Topic frequency analysis with top threads |
+
+---
+
 ## Security
 
-- **Read-only.** Only SELECT queries are allowed. No write, delete, or modify operations.
-- **API key required.** Every request must include a valid key.
-- **Company-scoped.** Queries are automatically filtered to your company.
-- **Audit trail.** Every key usage is tracked with timestamps.
-- **Hashed keys.** API keys are SHA-256 hashed. Plaintext is never stored.
-
-## Pricing
-
-The BrainFlow MCP server is **included free** with every BrainFlow subscription. There is no separate charge for MCP access.
-
-| Plan | Users | MCP Access | Rate Limits | Self-hosting |
-|------|-------|------------|-------------|--------------|
-| **Founder** | 1 | ✅ Full access | Standard | — |
-| **Startup** | Up to 10 | ✅ Full access | Higher | — |
-| **Corporate** | Up to 100 | ✅ Full access | Highest | ✅ Available |
-
-- **Founder plan:** Full MCP access with standard fair-use rate limits. Perfect for solo founders who want AI-powered memory.
-- **Startup plan:** Higher throughput for growing teams up to 10 members.
-- **Corporate plan:** Highest throughput, up to 100 team members, and optional self-hosted deployment.
-
-[View full pricing →](https://brain-flow.ai/pricing)
+- **Read-only.** The server only runs `SELECT` queries. `INSERT`, `UPDATE`, `DELETE`, `DROP`, `CREATE`, `UNION`, and subqueries are all blocked at the parser level.
+- **Company-scoped filtering.** Every query is automatically injected with `company_id = 'YOUR_COMPANY_UUID'` before execution. No manual filter needed, no filter bypass possible.
+- **API key validation.** Keys are SHA-256 hashed and validated on every request. Revoked or inactive keys are rejected immediately.
+- **UUID-enforced scoping.** Company IDs are validated as proper UUIDs before any query execution, preventing injection attacks.
+- **No external APIs.** Your data never leaves your database. No third-party API calls are made during query processing.
+- **Audit trail.** Each key records `last_used_at` timestamp on every successful request.
+- **Rate limiting.** Fair-use limits apply per plan tier to prevent abuse.
 
 ## Requirements
 
