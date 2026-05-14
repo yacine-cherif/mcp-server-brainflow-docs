@@ -24,14 +24,15 @@ Connect Claude, ChatGPT, Gemini, Cursor, and VS Code to your BrainFlow team memo
 
 The MCP server is **included free** with every BrainFlow subscription. No separate MCP charge.
 
-| Plan | Users | MCP Access | Rate Limits | Self-hosting |
-|------|-------|------------|-------------|--------------|
-| **Founder** | 1 | ✅ Full access | Standard | — |
-| **Startup** | Up to 10 | ✅ Full access | Higher | — |
-| **Corporate** | Up to 100 | ✅ Full access | Highest | ✅ Available |
+| Plan | Price | Users | MCP Access | Rate Limits |
+|------|-------|-------|------------|-------------|
+| **Founder** | $19.90/mo ($15.90/mo billed annually) | 1 | ✅ Full access | Standard |
+| **Startup** | $99.90/mo ($79.90/mo billed annually) | Up to 10 | ✅ Full access | Higher |
+| **Corporate** | $899.90/mo ($599.90/mo billed annually) | Up to 100 | ✅ Full access | Highest |
 
-> **Founder plan** includes full MCP access. Perfect for solo founders who want AI-powered memory.
-> **Corporate plan** offers optional self-hosted deployment for strict compliance requirements.
+- **7-day free trial** on all plans
+- **30-day refund guarantee**
+- **Cancel anytime**
 
 [View full pricing →](https://brain-flow.ai/pricing)
 
@@ -183,41 +184,6 @@ Replace `YOUR_KEY_HERE` with your actual API key. Restart your assistant and sta
 - **Rate limiting.** Fair-use limits apply per plan tier to prevent abuse.
 
 For security issues, email hello@brain-flow.ai.
-
----
-
-## Self-Hosting (Corporate)
-
-Corporate plan customers can self-host the MCP server for compliance or latency reasons.
-
-### Environment Variables
-
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `DATABASE_URL` | Yes | PostgreSQL connection string |
-| `MCP_COMPANY_COLUMN` | No | Company ID column name (default: `company_id`) |
-| `MCP_MAX_ROWS` | No | Max rows per query (default: `1000`) |
-| `MCP_MAX_CELL_BYTES` | No | Max cell size in bytes (default: `10000`) |
-
-### Docker
-
-```bash
-docker build -t brainflow-mcp .
-docker run -e DATABASE_URL=postgres://... -p 8000:8000 brainflow-mcp
-```
-
-### Project Structure
-
-```
-mcp-server-brainflow/
-├── server.py              # FastAPI MCP server entry point
-├── Dockerfile             # Container build
-├── requirements.txt       # Python dependencies
-├── deploy.sh              # Deployment script
-├── generate_key.py        # API key generation utility
-├── claude_desktop_config.json.example  # Claude Desktop config template
-└── docs/                  # Onboarding screenshots
-```
 
 ## License
 

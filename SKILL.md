@@ -26,14 +26,15 @@ This skill connects Claude, ChatGPT, Gemini, Cursor, and VS Code Copilot to your
 
 The MCP server is **included free** with every BrainFlow subscription. No separate MCP charge.
 
-| Plan | Users | MCP Access | Rate Limits | Self-hosting |
-|------|-------|------------|-------------|--------------|
-| **Founder** | 1 | ✅ Full access | Standard | — |
-| **Startup** | Up to 10 | ✅ Full access | Higher | — |
-| **Corporate** | Up to 100 | ✅ Full access | Highest | ✅ Available |
+| Plan | Price | Users | MCP Access | Rate Limits |
+|------|-------|-------|------------|-------------|
+| **Founder** | $19.90/mo ($15.90/mo billed annually) | 1 | ✅ Full access | Standard |
+| **Startup** | $99.90/mo ($79.90/mo billed annually) | Up to 10 | ✅ Full access | Higher |
+| **Corporate** | $899.90/mo ($599.90/mo billed annually) | Up to 100 | ✅ Full access | Highest |
 
-> **Founder plan** includes full MCP access. Perfect for solo founders who want AI-powered memory.
-> **Corporate plan** offers optional self-hosted deployment for strict compliance requirements.
+- **7-day free trial** on all plans
+- **30-day refund guarantee**
+- **Cancel anytime**
 
 [View full pricing →](https://brain-flow.ai/pricing)
 
