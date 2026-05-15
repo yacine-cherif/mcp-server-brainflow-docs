@@ -1,6 +1,6 @@
-# BrainFlow MCP Skill
+# BrainFlow: The Brain of Your Company (MCP Skill)
 
-Query your team's shared email memory from any AI assistant.
+Your company's brain, connected to Claude, ChatGPT, Gemini, Cursor, and VS Code. Turn your team's email history into shared memory that any AI assistant can query with natural language.
 
 ## Overview
 

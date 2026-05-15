@@ -1,6 +1,6 @@
-# BrainFlow MCP Server
+# BrainFlow: The Brain of Your Company (MCP Server)
 
-Connect Claude, ChatGPT, Gemini, Cursor, and VS Code to your BrainFlow team memory. Query your company's shared email history with natural language.
+Your company's brain, connected to Claude, ChatGPT, Gemini, Cursor, and VS Code. Turn your team's email history into shared memory that any AI assistant can query with natural language.
 
 ![Query your team memory](docs/04-query-example.png)
 
