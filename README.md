@@ -2,6 +2,8 @@
 
 Your company's brain, connected to Claude, ChatGPT, Gemini, Cursor, and VS Code. Turn your team's email history into shared memory that any AI assistant can query with natural language.
 
+**🌐 [brain-flow.ai](https://brain-flow.ai)**
+
 ![Query your team memory](docs/04-query-example.png)
 
 ## Features
