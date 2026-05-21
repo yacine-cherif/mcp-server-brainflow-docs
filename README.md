@@ -36,7 +36,7 @@ The MCP server is **included free** with every BrainFlow subscription. No separa
 - **30-day refund guarantee**
 - **Cancel anytime**
 
-[View full pricing →](https://brain-flow.ai/pricing)
+[View full pricing →](https://brain-flow.ai/#pricing)
 
 ## How It Works
 
